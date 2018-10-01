@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+  - name: Connectivity Test
+    ping:
+
+  - name: Print the variable http_port
+    debug:
+      msg: "The value of http_port is {{ http_port }}"
